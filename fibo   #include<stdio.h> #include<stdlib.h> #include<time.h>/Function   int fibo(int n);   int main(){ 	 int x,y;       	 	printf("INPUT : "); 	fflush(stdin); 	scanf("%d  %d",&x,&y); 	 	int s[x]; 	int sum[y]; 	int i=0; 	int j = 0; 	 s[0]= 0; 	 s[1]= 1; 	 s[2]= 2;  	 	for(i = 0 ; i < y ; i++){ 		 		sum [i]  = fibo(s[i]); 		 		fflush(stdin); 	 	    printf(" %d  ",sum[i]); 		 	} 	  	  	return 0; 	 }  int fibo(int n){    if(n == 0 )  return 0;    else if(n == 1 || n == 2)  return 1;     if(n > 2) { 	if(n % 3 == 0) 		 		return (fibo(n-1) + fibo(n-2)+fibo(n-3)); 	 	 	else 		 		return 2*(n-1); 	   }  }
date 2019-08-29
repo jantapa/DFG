@@ -1,0 +1,79 @@
+//fibo
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+
+//Function
+
+
+int fibo(int n);
+
+
+int main(){
+	
+int x,y;
+
+    
+	
+	printf("INPUT : ");
+	fflush(stdin);
+	scanf("%d  %d",&x,&y);
+	
+	int s[x];
+	int sum[y];
+	int i=0;
+	int j = 0;
+	 s[0]= 0;
+	 s[1]= 1;
+	 s[2]= 2; 
+	
+	for(i = 0 ; i < y ; i++){
+		
+		sum [i]  = fibo(s[i]);
+		
+		fflush(stdin);
+	
+	    printf(" %d  ",sum[i]);
+		
+	}
+	
+
+	
+
+	return 0;
+	
+}
+
+int fibo(int n){
+  
+if(n == 0 )
+
+return 0;
+
+
+
+else if(n == 1 || n == 2)
+
+return 1;
+
+
+
+ if(n > 2)
+{
+	if(n % 3 == 0)
+		
+		return (fibo(n-1) + fibo(n-2)+fibo(n-3));
+	
+	
+	else
+		
+		return 2*(n-1);
+	
+
+
+}
+
+}
